@@ -1,15 +1,19 @@
 ```mermaid
-block
-  columns 4
-  ID space space 操作
-  block:group1:1
-    columns 1
-    a37 Fa
+flowchart LR
+  subgraph group1["group1"]
+    A["a37"]
+    B["Fa"]
+    A --- B
   end
-  space
-  Lab
-  block:group2:4
-    %% columns auto (default)
-    关机 更多
+
+  ID["ID"] --- LAB["Lab"] --- OP["操作"]
+
+  subgraph group2["group2"]
+    OFF["关机"]
+    MORE["更多"]
+    OFF --- MORE
   end
+
+  B --- ID
+  OP --- OFF
 ```
