@@ -1,19 +1,27 @@
 ```mermaid
-flowchart LR
-  subgraph group1["group1"]
-    A["a37"]
-    B["Fa"]
-    A --- B
+flowchart TB
+  subgraph R1[" "]
+    direction LR
+    ID["ID"] ~~~ S1[" "] ~~~ S2[" "] ~~~ OP["操作"]
   end
 
-  ID["ID"] --- LAB["Lab"] --- OP["操作"]
-
-  subgraph group2["group2"]
-    OFF["关机"]
-    MORE["更多"]
-    OFF --- MORE
+  subgraph R2[" "]
+    direction LR
+    subgraph G1[" "]
+      direction TB
+      A["a37"] ~~~ B["Fa"]
+    end
+    S3[" "] ~~~ LAB["Lab"] ~~~ S4[" "]
+    subgraph G2[" "]
+      direction LR
+      OFF["关机"] ~~~ MORE["更多"]
+    end
   end
 
-  B --- ID
-  OP --- OFF
+  ID ~~~ A
+  S2 ~~~ LAB
+  OP ~~~ OFF
+
+  classDef ghost fill:transparent,stroke:transparent,color:transparent;
+  class S1,S2,S3,S4 ghost;
 ```
