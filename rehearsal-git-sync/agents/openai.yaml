@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rehearsal Git Sync"
+  short_description: "Sync /tmp/Rehearsal to GitHub"
+  default_prompt: "Sync and push /tmp/Rehearsal to git@github.com:ShengNW/Rehearsal.git over SSH. Ensure CodexDev/ is ignored, fix origin URL/branch tracking, commit with a clear message, then push and report status."
