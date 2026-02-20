@@ -1,10 +1,10 @@
 ```mermaid
-block
+block-beta
   columns 5
-  传输:5
+  t["传输"]:5
   space
   space
-  翠夹
+  w["翠夹"]
   space
   space
 ```
